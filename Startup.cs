@@ -48,7 +48,7 @@ namespace DatingApp.API
             }
 
             app.UseHttpsRedirection();
-            // allow cors
+            // allow cors by adding cors header in http respond, this should add to pipeline befroe use MVC
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseMvc();
         }
