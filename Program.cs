@@ -14,7 +14,8 @@ namespace DatingApp.API
     {
         public static void Main(string[] args)
         {
-            string port = args[0];
+            Console.WriteLine(args[0]);
+            string port = !String.IsNullOrEmpty(args[0]) ? args[0] : "8080";
             CreateWebHostBuilder(args)
                 .UseUrls("http://localhost:" + port + "/")
                 .Build()
